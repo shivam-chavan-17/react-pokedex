@@ -1,53 +1,55 @@
-import React from 'react'
-import { DetailPokemon } from '../interface/pokemon.interface'
-import { Card, CardContent, Grid, Typography } from '@mui/material'
-interface PokemonBasicInfoProp{
-    pokemon: DetailPokemon
+import React from "react";
+import { DetailPokemon } from "../interface/pokemon.interface";
+import { Card, CardContent, Grid, Typography } from "@mui/material";
+interface PokemonBasicInfoProp {
+  pokemon: DetailPokemon;
 }
 
-const PokemonBasicInfo = ({pokemon}: PokemonBasicInfoProp) => {
+const PokemonBasicInfo = ({ pokemon }: PokemonBasicInfoProp) => {
   return (
-    <Card >
-        <CardContent>
-            <Grid
-                container
-                sx={{textTransform: "capitalize"}}
-                justifyContent="center"
-                textAlign="center"
-                spacing={2}
-            >
-                <Grid item xs={6}>
-                    <Typography variant="subtitle2">Height</Typography>
-                    <Typography variant="body2">{pokemon.height}</Typography>
-                </Grid>
-                <Grid item xs={6}>
-                    <Typography variant="subtitle2">Weight</Typography>
-                    <Typography variant="body2">{pokemon.weight}</Typography>
-                </Grid>
-                <Grid item xs={6}>
-                    <Typography variant="subtitle2">Types</Typography>
-                    <Typography variant="body2">{pokemon.types.map((type)=>{
-                        return(
-                            <Typography variant="body2">
-                                {type.type.name}
-                            </Typography>
-                        )
-                    })}</Typography>
-                </Grid>
-                <Grid item xs={6}>
-                    <Typography variant="subtitle2">Abilities</Typography>
-                    <Typography variant="body2">{pokemon.abilities.map((ability)=>{
-                        return(
-                            <Typography variant="body2">
-                                {ability.ability.name}
-                            </Typography>
-                        )
-                    })}</Typography>
-                </Grid>
-            </Grid>
-        </CardContent>
+    <Card>
+      <CardContent>
+        <Grid
+          container
+          sx={{ textTransform: "capitalize" }}
+          justifyContent="center"
+          textAlign="center"
+          spacing={2}
+        >
+          <Grid item xs={6}>
+            <Typography variant="subtitle2">Height</Typography>
+            <Typography variant="body2">{pokemon.height}</Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="subtitle2">Weight</Typography>
+            <Typography variant="body2">{pokemon.weight}</Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="subtitle2">Types</Typography>
+            <Typography variant="body2">
+              {pokemon.types.map((type) => {
+                return (
+                  <Typography variant="body2">{type.type.name}</Typography>
+                );
+              })}
+            </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="subtitle2">Abilities</Typography>
+            <Typography variant="body2">
+              {pokemon.abilities.map((ability) => {
+                return (
+                  <Typography variant="body2">
+                    {ability.ability.name}
+                  </Typography>
+                );
+              })}
+            </Typography>
+          </Grid>
+        </Grid>
+      </CardContent>
     </Card>
-  )
-}
+  );
+};
 
-export default PokemonBasicInfo
+export default PokemonBasicInfo;

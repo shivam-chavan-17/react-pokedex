@@ -11,15 +11,15 @@ const router = createBrowserRouter([
   },
   {
     path: "pokemon/:pokemonName",
-    element: <PokemonDetails />
-  }
+    element: <PokemonDetails />,
+  },
 ]);
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <RouterProvider router = {router} />
+      <RouterProvider router={router} />
     </ThemeProvider>
   );
 }
