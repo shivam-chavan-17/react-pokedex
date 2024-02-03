@@ -1,5 +1,5 @@
 ### Live
-[https://pokedex-application-u5s5.onrender.com]
+(https://pokedex-application-u5s5.onrender.com)
 
 ## Available Scripts
 
